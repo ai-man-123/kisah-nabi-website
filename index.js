@@ -1,21 +1,37 @@
 const ikyy = require("ikyy");
 const rzk = new ikyy();
 const str = [
-    'adam',     'idris',  'nuh',
-    'hud',      'shaleh', 'ibrahim',
-    'luth',     'ismail', 'ishaq',
-    'yaqub',    'yusuf',  'ayyub',
-    'syuaib',   'musa',   'harun',
-    'zulkifli', 'daud',   'sulaiman',
-    'ilyas',    'ilyasa', 'yunus',
-    'zakaria',  'yahya',  'isa',
-    'muhammad'
-  ]
-  const express = require("express"),
+  "adam",
+  "idris",
+  "nuh",
+  "hud",
+  "shaleh",
+  "ibrahim",
+  "luth",
+  "ismail",
+  "ishaq",
+  "yaqub",
+  "yusuf",
+  "ayyub",
+  "syuaib",
+  "musa",
+  "harun",
+  "zulkifli",
+  "daud",
+  "sulaiman",
+  "ilyas",
+  "ilyasa",
+  "yunus",
+  "zakaria",
+  "yahya",
+  "isa",
+  "muhammad",
+];
+const express = require("express"),
   cors = require("cors"),
   logger = require("morgan"),
   cookieParser = require("cookie-parser"),
-bodyParser = require("body-parser");
+  bodyParser = require("body-parser");
 const app = express();
 
 app.set("json spaces", 2);
@@ -37,17 +53,15 @@ app.use(function (err, req, res, next) {
 });
 
 app.get("/nabi", async (req, res) => {
-  const q = req.query.q
-  const ress = await rzk.search.kisahnabi(q)
-  res.render(__dirname + "/public/result.ejs",{ res: ress });
+  const q = req.query.q;
+  const ress = await rzk.search.kisahnabi(q);
+  res.render(__dirname + "/public/result.ejs", { res: ress });
 });
 
 app.get("/", async (req, res) => {
-  res.render(__dirname + "/public/index.ejs",{ str });
+  res.render(__dirname + "/public/index.ejs", { str });
 });
-
 
 app.listen(8080, () => {
   console.log("Berhasil Tersambungg");
 });
-
