@@ -13,4 +13,4 @@
 ```
 
 Thanks To:
-[Rizky 878](`https://github.com/Rizky878`)
+[`Rizky 878`](https://github.com/Rizky878)
