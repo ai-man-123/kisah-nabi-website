@@ -12,5 +12,6 @@
 # server running in http://localhost:8080
 ```
 
-Thanks To:
-[`Rizky 878`](https://github.com/Rizky878)
+Thanks To: 
+ 
+- [`Rizky878`](https://github.com/Rizky878)
