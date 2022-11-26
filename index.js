@@ -1,10 +1,6 @@
-const cheerio = require("cheerio");
-const url = require("url");
-const axios = require("axios");
 const ikyy = require("ikyy");
 const rzk = new ikyy();
-const util = require("util")
-str = [
+const str = [
     'adam',     'idris',  'nuh',
     'hud',      'shaleh', 'ibrahim',
     'luth',     'ismail', 'ishaq',
@@ -43,9 +39,7 @@ app.use(function (err, req, res, next) {
 app.get("/nabi", async (req, res) => {
   const q = req.query.q
   const ress = await rzk.search.kisahnabi(q)
-  resss = util.format(ress.result.description)
- //res.json(ress)
-  res.render(__dirname + "/public/result.ejs",{ text: resss,res: ress });
+  res.render(__dirname + "/public/result.ejs",{ res: ress });
 });
 
 app.get("/", async (req, res) => {
