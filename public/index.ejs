@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kisah Nabi - Home</title>
+</head>
+<body>
+<div class="heading">
+    <h1>Kisah Nabi</h1>
+  </div>
+  <div class="container">
+    <div class="nav"><a href=""><i class="fa fa-home"></i></a><a href="https://wa.me/6282387804410" target="_blank"><i class="fab fa-whatsapp"></i></a><a href="https://github.com/rizky878" target="_blank"><i class="fab fa-github"></i></a><a href="https://instagram.com/rizkyfadilah8_" target="_blank"><i class="fab fa-instagram"></i></a></div>
+    <div class="list">
+        <% for (let i of str) { %>
+          <div class="num">
+        <a href=<%= "/nabi?q=" + i %> rel="noopener noreferrer"><h3>Nabi <%= i.charAt(0).toUpperCase() + i.slice(1) + `${i == "muhammad" ? " SAW" : " As"}` %></h3></a>
+      </div>
+        <% } %>
+    </div>
+  </div>
+  <h5 class="message">Copyright Rzkyy Dev - <%= new Date().getFullYear() %></h5>
+</body>
+</html>
